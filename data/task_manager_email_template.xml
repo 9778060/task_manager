@@ -1,0 +1,22 @@
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_task_expiry" model="mail.template">
+            <field name="name">Task Expiry Notification</field>
+            <field name="model_id" ref="model_task_manager"/>
+            <field name="subject">Task Due Soon: {{ object.name }}</field>
+            <field name="body_html" type="html">
+                <p>Dear <t t-out="object.assigned_to.name"/>,</p>
+                <p>The task <strong><t t-out="object.name"/></strong> is due in <t t-out="ctx['days_left']"/> day(s). Please take action.</p>
+                <p>Task Details:</p>
+                <ul>
+                    <li><strong>Description:</strong> <t t-out="object.description"/></li>
+                    <li><strong>Priority:</strong> <t t-out="object.priority"/></li>
+                    <li><strong>Due Date:</strong> <t t-out="object.due_date"/></li>
+                </ul>
+            </field>
+            <field name="email_from">{{ user.email }}</field>
+            <field name="email_to">{{ object.assigned_to.email }}</field>
+        </record>
+
+    </data>
+</odoo>

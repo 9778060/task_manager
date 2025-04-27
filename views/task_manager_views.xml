@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+
+        <record id="action_task_manager" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="res_model">task.manager</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_report_task_manager_list" model="ir.actions.report">
+            <field name="name">Task Manager Report</field>
+            <field name="model">task.manager</field>
+            <field name="report_name">task_manager.report_task_manager_list</field>
+            <field name="report_type">qweb-pdf</field>
+        </record>
+
+        <record id="view_task_manager_tree" model="ir.ui.view">
+            <field name="name">task.manager.tree</field>
+            <field name="model">task.manager</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <header>
+                        <button name="%(action_report_task_manager_list)d" type="action" string="Print Tasks" class="oe_highlight" display="always"/>
+                    </header>              
+                    <field name="name"/>
+                    <field name="assigned_to"/>
+                    <field name="due_date"/>
+                    <field name="priority"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_task_manager_form" model="ir.ui.view">
+            <field name="name">task.manager.form</field>
+            <field name="model">task.manager</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="assigned_to"/>
+                            <field name="due_date"/>
+                            <field name="priority"/>
+                            <field name="status"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="menu_task_manager_root" name="Task Manager" sequence="10"/>
+        <menuitem id="menu_task_manager" name="Tasks" parent="menu_task_manager_root" action="action_task_manager" sequence="1"/>
+        
+    </data>
+</odoo>

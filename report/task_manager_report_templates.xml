@@ -1,0 +1,33 @@
+<odoo>
+  <template id="report_task_manager_list">
+    <t t-call="web.external_layout">
+      <main>
+        <div class="page">
+          <h2>Task Manager Report</h2>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Assigned To</th>
+                <th>Priority</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <t t-foreach="docs" t-as="task">
+                <tr>
+                  <td><t t-esc="task.name"/></td>
+                  <td><t t-esc="task.description"/></td>
+                  <td><t t-esc="task.assigned_to.name"/></td>
+                  <td><t t-esc="dict(task._fields['priority'].selection).get(task.priority)"/></td>
+                  <td><t t-esc="dict(task._fields['status'].selection).get(task.status)"/></td>
+                </tr>
+              </t>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </t>
+  </template>
+</odoo>
