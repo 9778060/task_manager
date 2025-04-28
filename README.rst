@@ -42,21 +42,22 @@ Usage
 =====
 
 #. Go to *Task Manager* menu to open a tree view of a Task Manager module.
-#. A list of tasks is shown.
-#. Main functionality:
-* A new task can be created using button *New*
-* From the tree view an existing task can be opened and the following data can be edited:
-** Name - name of the task (mandatory)
-** Description - description of the task
-** Assigned to - a reference to the user assigned to the task
-** Due date - a due date of the task (can be in the past)
-** Priority - priority of the task (Low, Medium, High)
-** Status - status of the task (New, In progress, Completed)
-* Additional functionality:
-** From tree view a *Print Tasks* button exports task report into PDF:
-*** If no tasks have been selected -> report contains all the records
-*** If some tasks are selected -> report contains selected records only
-** A cron job to send out email notifications to the assigned user of a task
+1. Go to the *Task Manager* menu to open a tree view of the Task Manager module.
+2. A list of tasks is shown.
+3. Main functionality:
+   - A new task can be created using the *New* button.
+   - From the tree view, an existing task can be opened and the following data can be edited:
+     - **Name** — name of the task (mandatory)
+     - **Description** — description of the task
+     - **Assigned to** — a reference to the user assigned to the task
+     - **Due date** — due date of the task (can be in the past)
+     - **Priority** — priority of the task (Low, Medium, High)
+     - **Status** — status of the task (New, In progress, Completed)
+4. Additional functionality:
+   - From the tree view, a *Print Tasks* button exports a task report into PDF:
+     - If no tasks are selected, the report contains all the records.
+     - If some tasks are selected, the report contains only the selected records.
+   - A cron job sends out email notifications to the assigned user of a task.
 
 Credits
 =======
