@@ -14,8 +14,11 @@ Task Manager Module
 This module allows creating and manage tasks in Odoo
 
 Additional functionality:
-* Cron job to send out email notifications when the task is due (3 days or less)
-* Custom reporting on the list of tasks
+
+• Cron job to send out email notifications when the task is due (3 days or less)
+
+• Custom reporting on the list of tasks
+
 
 **Table of contents**
 
@@ -68,7 +71,7 @@ Usage
      • If no tasks are selected, the report contains all the records.
 
      • If some tasks are selected, the report contains only the selected records.
-     
+
    • A cron job sends out email notifications to the assigned user of a task.
 
 
