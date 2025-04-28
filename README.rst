@@ -41,7 +41,6 @@ Configuration
 Usage
 =====
 
-#. Go to *Task Manager* menu to open a tree view of a Task Manager module.
 1. Go to the *Task Manager* menu to open a tree view of the Task Manager module.
 2. A list of tasks is shown.
 3. Main functionality:
