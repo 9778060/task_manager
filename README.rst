@@ -37,17 +37,17 @@ Configuration
 =====
 1. User access groups:
 
-1. Go to *Settings > Users & Companies > Groups*.
+   • Go to *Settings > Users & Companies > Groups*.
 
-2. Look for the newly created group - *Task Manager User*.
+   • Look for the newly created group - *Task Manager User*.
 
-3. Assign the necessary users to that group.
+   • Assign the necessary users to that group.
 
-4. Reload the page.
+   • Reload the page.
 
 2. Outgoing mail server configuration in Odoo:
 
-1. To set-up an outgoing mail server
+   • To set-up an outgoing mail server
 
 
 Usage
