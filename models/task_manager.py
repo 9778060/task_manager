@@ -81,10 +81,12 @@ class ReportTaskManagerList(models.AbstractModel):
     @api.model
     def _get_report_values(self, docids, data=None):
         if not docids:
-            # If no specific record is selected, return all task managers
+            # If no specific record is selected, return all tasks
             task_managers = self.env["task.manager"].search([])
+            _logger.info("All the records to be extracted in the output report")
         else:
             task_managers = self.env["task.manager"].browse(docids)
+            _logger.info("Only selected records to be extracted in the output report: %s", docids)
         
         return {
             "docs": task_managers,
